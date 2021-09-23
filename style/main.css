@@ -2,6 +2,8 @@
 
 :root {
     --dark-blue: #011826;
+    --deep-blue: #023059;
+    --muted-blue: #060d13;
     --light-blue: #0477BF;
     --royal-blue: #054BA6;
     --muted-white: rgba(255, 255, 255, 0.66);
@@ -9,10 +11,27 @@
 
 }
 
+.uk-background-default{background-color:var(--dark-blue)}
+.uk-background-muted{background-color:var(--muted-blue)}
+.uk-background-primary{background-color: var(--light-blue)}
+.uk-background-secondary{background-color: var(--royal-blue)}
+
 html {
     background: var(--dark-blue);
     color: var(--muted-white);
     font: 'Montserrat', sans-serif;
+}
+
+.solid-border {
+  border: solid 1px var(--deep-blue);
+}
+
+.solid-border-top {
+  border-top: solid 1px var(--deep-blue);
+}
+
+.solid-border-bottom { 
+  border-bottom: solid 1px var(--deep-blue);
 }
 
 a,
@@ -48,5 +67,97 @@ h6,
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   color: var(--full-white);
-  text-transform: none;
+  text-transform: uppercase;
+}
+
+/* Text Color Modifiers */
+
+.uk-text-muted {
+  color: var(--deep-blue) !important;
+}
+.uk-text-emphasis {
+  color: var(--full-white) !important;
+}
+.uk-text-primary {
+  color: var(--light-blue) !important;
+}
+.uk-text-secondary {
+  color: var(--royal-blue)  !important;
+}
+.uk-text-success {
+  color: #32d296 !important;
+}
+.uk-text-warning {
+  color: #faa05a !important;
+}
+.uk-text-danger {
+  color: #f0506e !important;
+}
+
+/*
+ * Default
+ * Note: Header and Footer are only implemented for the default style
+ */
+ .uk-card-default {
+  background-color: var(--deep-blue);
+  color: var(--muted-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.uk-card-default .uk-card-title {
+  color: var(--full-white);
+}
+.uk-card-default.uk-card-hover:hover {
+  background-color: #fff;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+.uk-card-default .uk-card-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+.uk-card-default .uk-card-footer {
+  border-top: 1px solid #e5e5e5;
+}
+/*
+ * Primary
+ */
+.uk-card-primary {
+  background-color: #1e87f0;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.uk-card-primary .uk-card-title {
+  color: #fff;
+}
+.uk-card-primary.uk-card-hover:hover {
+  background-color: #1e87f0;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+/*
+ * Secondary
+ */
+.uk-card-secondary {
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.uk-card-secondary .uk-card-title {
+  color: #fff;
+}
+.uk-card-secondary.uk-card-hover:hover {
+  background-color: #222;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+}
+
+.image-circle-border {
+  display: block;
+  position: relative;
+  padding: 20px;
+  border: solid 2px var(--deep-blue);
+  border-radius: 50%;
+}
+
+.circle-border {
+  padding: 15px;
+  border: solid 2px var(--deep-blue);
+  border-radius: 50%;
+  aspect-ratio: 1 !important;
 }
